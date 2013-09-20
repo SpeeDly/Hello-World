@@ -9,11 +9,13 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'Hello_World.views.home', name='home'),
     # url(r'^Hello_World/', include('Hello_World.foo.urls')),
-    url(r'^hello/', include('hello.urls')),
+    url(r'^api/', include('Hello_World.services.urls')),
+    url(r'^search/', include('Hello_World.search.urls')),
+    #url(r'^location/', include('Hello_World.location.urls')),
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    #url(r'^api/', include('rest_framework.urls', namespace='rest_framework')),
 )
