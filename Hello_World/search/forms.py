@@ -19,6 +19,3 @@ class SimpleForm(forms.Form):
 		for i,s in enumerate(service_types):
 			choices.append((i, s.name))
 		self.fields['service_types'].choices = choices[1:]
-
-		# self.fields['select'].queryset = ['Service','City']
-		# print choices
